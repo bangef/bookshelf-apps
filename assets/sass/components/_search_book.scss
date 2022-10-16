@@ -1,0 +1,10 @@
+@import "../abstracts/variable";
+.search_section {
+	& > #searchBook {
+		display: flex;
+		flex-direction: column;
+		& > label {
+			margin-top: 1rem;
+		}
+	}
+}

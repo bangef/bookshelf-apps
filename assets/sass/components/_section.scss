@@ -1,0 +1,18 @@
+@import "../abstracts/variable";
+section {
+	margin: 1rem;
+	border-radius: 1rem;
+	max-width: 768px;
+	border: 2px dashed $color-dark;
+	padding: 1rem;
+	background-color: $color-primary;
+	& > h2 {
+		color: $color-dark;
+	}
+	@media screen and (min-width: 768px) {
+		margin: 1rem auto;
+	}
+	@media screen and (min-width: 768px) {
+		max-width: 500px;
+	}
+}

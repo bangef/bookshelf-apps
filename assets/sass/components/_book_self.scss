@@ -1,0 +1,31 @@
+@import "../abstracts/variable";
+.book_shelf {
+	.book_list {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+		.book_item {
+			@media screen and (min-width: 768px) {
+				width: 40%;
+				margin-top: 0;
+			}
+			background-color: $color-dark;
+			border-radius: 1rem;
+			padding: 1rem;
+			margin-top: 1rem;
+			color: $color-light;
+
+			& > .action > button {
+				color: $color-dark;
+				font-weight: 700;
+				opacity: 0.9;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import "../abstracts/variable";
+button {
+	cursor: pointer;
+	margin-top: 1rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	border: none;
+	padding: 1rem 2rem;
+	color: $color-light;
+	background-color: $color-dark;
+	font-family: "DM Sans", sans-serif;
+	letter-spacing: 2px;
+	opacity: 0.9;
+	transition: all ease-in 0.1s;
+	&.green {
+		background-color: #cfff8d;
+	}
+	&.red {
+		background-color: #f96666;
+	}
+	&:hover {
+		letter-spacing: 1px;
+		opacity: 1;
+	}
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 3px lightskyblue;
+	}
+}

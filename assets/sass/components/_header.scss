@@ -1,0 +1,27 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixins";
+
+.head_bar {
+	padding: 1rem;
+	background-color: $color-primary;
+	width: fit-content;
+	border-radius: 0 0 1rem 0;
+	@media screen and (min-width: 768px) {
+		border-radius: 0 0 2rem 0;
+		padding: 1rem 2rem;
+	}
+	@media screen and (min-width: 1024px) {
+		border-radius: 0 0 3rem 0;
+	}
+	&__title {
+		font-size: $fs-h5;
+		font-weight: 700;
+		color: $color-dark;
+		@media screen and (min-width: 768px) {
+			font-size: $fs-h3;
+		}
+		@media screen and (min-width: 1024px) {
+			font-size: $fs-h2;
+		}
+	}
+}

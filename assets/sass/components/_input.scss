@@ -1,0 +1,19 @@
+.input {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	margin-top: 0.8rem;
+
+	&_inline {
+		margin-top: 1rem;
+	}
+}
+
+input {
+	margin-top: 0.1rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: $color-dark;
+	border-radius: 0.5rem;
+	border: 1px solid $color-dark;
+}
