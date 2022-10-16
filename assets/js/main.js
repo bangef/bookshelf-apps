@@ -8,8 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
 		event.preventDefault();
 		addBook();
 	});
+	const getSearchBookTitle = document.querySelector("#searchBookTitle");
+	getSearchBookTitle.addEventListener("input", (event) => {
+		let value = event.target.value;
+		filteredElemen(value);
+	});
 	document.dispatchEvent(new Event(RENDER_EVENT));
 });
+
+const filteredElemen = (value) => {
+	const allElement = document.querySelectorAll(".book_item");
+	const temp = [];
+	allElement.forEach((el) => temp.push(el));
+	temp.forEach((elemen) => {
+		let el = elemen.childNodes[0].innerText.toLowerCase();
+		let val = value.toLowerCase();
+		el.search(val) > -1
+			? (elemen.style.display = "block")
+			: (elemen.style.display = "none");
+	});
+};
+
 document.addEventListener(RENDER_EVENT, () => {
 	const incompleteBookshelfList = document.getElementById(
 		"incompleteBookshelfList"
